@@ -28,7 +28,6 @@ async function def(){
 
 input.addEventListener('change', async () => {
   const data = await api.getData(input.value);
-  if(data.cod !== 200) return alert('Invalid');
   city.innerHTML = data.name;
   img.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
   degree.innerHTML = data.main.temp;
